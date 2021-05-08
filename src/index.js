@@ -4,6 +4,7 @@ import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import { applyMiddleware, compose, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
+import "antd/dist/antd.css";
 
 import "./index.css";
 import App from "./App";
@@ -18,9 +19,7 @@ const store = createStore(rootReducer, enhancer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <App />
   </Provider>,
   document.getElementById("root")
 );
