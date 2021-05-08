@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { userRegister } from "../actions/useraction";
 import UserForm from "../components/UserForm";
 import useInput from "../hooks/useinput";
-import { STATE_INIT } from "../src/reducers/user";
+import { STATE_INIT } from "../reducers/user";
 
 function Register() {
   const history = useHistory();
