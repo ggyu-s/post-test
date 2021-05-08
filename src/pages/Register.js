@@ -34,7 +34,7 @@ function Register() {
         },
       })
     );
-    console.log(password, passwordCheck);
+    console.log(email, name, password, passwordCheck);
   }, [dispatch, email, password, passwordCheck, name]);
 
   /**

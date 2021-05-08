@@ -22,10 +22,12 @@ export const userRegister = (info) => async (dispatch) => {
     dispatch({
       type: USER_REGISTER_REQUEST,
     });
-    await axios.post("/auth/register", info.data);
-    dispatch({
-      type: USER_REGISTER_SUCCESS,
-    });
+    // await axios.post("/user/register", info.data);
+    setTimeout(() => {
+      dispatch({
+        type: USER_REGISTER_SUCCESS,
+      });
+    }, 1000);
   } catch (error) {
     dispatch({
       type: USER_REGISTER_FAILURE,
