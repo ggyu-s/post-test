@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { userRegister } from "../actions/useraction";
 import UserForm from "../components/UserForm";
 import useInput from "../hooks/useinput";
+import { STATE_INIT } from "../src/reducers/user";
 
 function Register() {
   const history = useHistory();
@@ -48,9 +49,12 @@ function Register() {
    */
   useEffect(() => {
     if (userRegisterDone || userInfo) {
+      dispatch({
+        type: STATE_INIT,
+      });
       history.replace("/");
     }
-  }, [history, userInfo, userRegisterDone]);
+  }, [dispatch, history, userInfo, userRegisterDone]);
 
   /**
    * 에러 발생시 에러 표시
