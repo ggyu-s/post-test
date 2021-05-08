@@ -33,14 +33,15 @@ function LoginForm() {
    * 로그인클릭시 디스패치
    */
   const onSubmit = useCallback(() => {
-    dispatch(
-      userLogin({
-        data: {
-          email,
-          password,
-        },
-      })
-    );
+    // dispatch(
+    //   userLogin({
+    //     data: {
+    //       email,
+    //       password,
+    //     },
+    //   })
+    // );
+    console.log(email, password);
   }, [dispatch, email, password]);
 
   /**

@@ -17,7 +17,10 @@ export const USER_LOGOUT_FAILURE = "USER_LOGOUT_FAILURE";
 export const STATE_INIT = "STATE_INIT";
 
 const inititalState = {
-  userInfo: null, // 로그인한 유저정보 저장
+  userInfo: {
+    name: "test",
+    email: "test@test.test",
+  }, // 로그인한 유저정보 저장
   userRegisterLoading: false,
   userRegisterDone: false,
   userRegisterError: null,

@@ -1,11 +1,13 @@
 import { combineReducers } from "redux";
-import user from "../reducers/user";
 import axios from "axios";
+import user from "../reducers/user";
+import post from "../reducers/post";
 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
 
 const rootReducer = combineReducers({
   user,
+  post,
 });
 export default rootReducer;

@@ -49,12 +49,9 @@ function Register() {
    */
   useEffect(() => {
     if (userRegisterDone || userInfo) {
-      dispatch({
-        type: STATE_INIT,
-      });
       history.replace("/");
     }
-  }, [dispatch, history, userInfo, userRegisterDone]);
+  }, [history, userInfo, userRegisterDone]);
 
   /**
    * 에러 발생시 에러 표시
