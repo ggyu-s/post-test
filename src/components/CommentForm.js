@@ -3,7 +3,7 @@ import React, { useCallback } from "react";
 import { useSelector } from "react-redux";
 import useInput from "../hooks/useinput";
 
-function ContentText() {
+function CommentForm() {
   const { addPostLoading } = useSelector((state) => state.post);
   const [text, onChangeText] = useInput("");
 
@@ -17,7 +17,7 @@ function ContentText() {
         value={text}
         onChange={onChangeText}
         maxLength={140}
-        placeholder="포스트 입력"
+        placeholder="댓글 입력"
       />
       <Button
         type="primary"
@@ -31,4 +31,4 @@ function ContentText() {
   );
 }
 
-export default ContentText;
+export default CommentForm;

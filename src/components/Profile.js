@@ -38,9 +38,8 @@ function Profile({ userInfo }) {
     <>
       <GlobalStyle />
       <Card
-        style={{ width: 300, marginTop: 16 }}
         actions={[
-          <div onClick={onMoveUpdate}>프로필수정</div>,
+          <div onClick={onMoveUpdate}>게시물</div>,
           <div onClick={onClickLogout}>로그아웃</div>,
         ]}
       >
